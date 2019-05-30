@@ -1,0 +1,24 @@
+{
+  "name": "subtitles-composer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "npx eslint --ignore-path .eslintignore .",
+    "lint:fix": "eslint --ignore-path .eslintignore . --fix",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:ci": "jest --ci"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sbd": "^1.0.15",
+    "smpte-timecode": "^1.2.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "jest": "^24.8.0"
+  }
+}

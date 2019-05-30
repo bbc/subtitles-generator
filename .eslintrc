@@ -1,0 +1,51 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+  ],
+  "extends": [
+  ],
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "prefer-const": 1,
+    "space-infix-ops": ["error", {"int32Hint": false}],
+    "no-unused-expressions": "error",
+    "no-trailing-spaces": "error",
+    "no-nested-ternary": "error",
+    "indent": ["warn", 2],
+    "arrow-spacing": ["error", { "before": true, "after": true }],
+    "space-in-parens": [ 0, "never" ],
+    "template-curly-spacing": [ 2, "always" ],
+    "array-bracket-spacing": [ 2, "always" ],
+    "object-curly-spacing": [ 2, "always" ],
+    "computed-property-spacing": [ 2, "never" ],
+    "no-multiple-empty-lines": [ 2, { "max": 1, "maxEOF": 0, "maxBOF": 0 } ],
+    "quotes": [ 1, "single", "avoid-escape" ],
+    "no-use-before-define": [ 2, { "functions": false } ],
+    "semi": [1, "always"],
+    "class-methods-use-this": [ 1 ],
+    "no-console": 0,
+    "no-undef": [ 1 ],
+    "no-case-declarations": [ 1 ],
+    "no-return-assign": [ 1 ],
+    "no-param-reassign": [ 1 ],
+    "no-shadow": [ 1 ],
+    "camelcase": [ 1 ],
+    "no-underscore-dangle" : [0, "always"],
+    "keyword-spacing": ["error", { "before": true, "after": true }],
+    "key-spacing": ["error", { "afterColon": true }],
+    "newline-before-return": "error",
+    "space-before-blocks": "error",
+    "no-unused-vars": "error",
+    "no-multi-spaces": "warn",
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "prefer-destructuring": ["error", {
+      "VariableDeclarator": {
+        "array": false,
+        "object": false
+      }
+    }]
+  }
+}
