@@ -167,5 +167,5 @@ npm run publish:public
 
 # TODO
 - [ ] Open source
-- [ ] use import/export in modules 
+- [x] use import/export in modules 
 - [x] add babel 
