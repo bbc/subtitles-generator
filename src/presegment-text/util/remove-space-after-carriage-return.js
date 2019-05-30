@@ -6,4 +6,4 @@ function removeSpaceAfterCarriageReturn(text) {
   return text.replace(/\n /g, '\n');
 }
 
-module.exports = removeSpaceAfterCarriageReturn;
+export default removeSpaceAfterCarriageReturn;

@@ -4,4 +4,4 @@ function addLineBreakBetweenSentences(text) {
   return text.replace(/\n/g, '\n\n');
 }
 
-module.exports = addLineBreakBetweenSentences;
+export default addLineBreakBetweenSentences;

@@ -6,4 +6,4 @@ function removeSpaceAtBeginningOfLine(text) {
   return text.map((r) => {return r.replace(/^\s+/g, '');});
 }
 
-module.exports = removeSpaceAtBeginningOfLine;
+export default removeSpaceAtBeginningOfLine;

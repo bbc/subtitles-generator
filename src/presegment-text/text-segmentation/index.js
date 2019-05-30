@@ -1,5 +1,5 @@
 'use strict';
-var tokenizer = require('sbd');
+import tokenizer from 'sbd';
 
 function textSegmentation(text, honorifics) {
   var optionalHonorifics = null;
@@ -24,4 +24,4 @@ function textSegmentation(text, honorifics) {
   return sentencesWithLineSpaces;
 }
 
-module.exports = textSegmentation;
+export default textSegmentation;

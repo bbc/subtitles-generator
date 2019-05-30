@@ -15,4 +15,4 @@ function csvGenerator(srtJsonContent) {
   return lines;
 }
 
-module.exports = csvGenerator;
+export default csvGenerator;

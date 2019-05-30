@@ -1,5 +1,5 @@
 'use strict';
-const removeSpaceAtBeginningOfLine = require('../util/remove-space-at-beginning-of-line.js');
+import removeSpaceAtBeginningOfLine from '../util/remove-space-at-beginning-of-line.js';
 
 function divideIntoTwoLines(text) {
   var lines = text.split('\n');
@@ -34,4 +34,4 @@ function divideIntoTwoLines(text) {
   return result;
 }
 
-module.exports = divideIntoTwoLines;
+export default divideIntoTwoLines;

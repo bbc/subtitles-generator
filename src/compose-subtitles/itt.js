@@ -1,5 +1,5 @@
-const tcFormat = require('./util/tc-format.js');
-const escapeText = require('./util/escape-text.js');
+import tcFormat from './util/tc-format.js';
+import escapeText from './util/escape-text.js';
 
 const ittGenerator = (vttJSON, lang = 'en-GB', FPS = 25) => {
   let ittOut =
@@ -47,4 +47,4 @@ const ittGenerator = (vttJSON, lang = 'en-GB', FPS = 25) => {
   return ittOut;
 };
 
-module.exports = ittGenerator;
+export default ittGenerator;

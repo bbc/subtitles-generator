@@ -1,5 +1,5 @@
 'use strict';
-const removeSpaceAfterCarriageReturn = require('../util/remove-space-after-carriage-return.js');
+import removeSpaceAfterCarriageReturn from '../util/remove-space-after-carriage-return.js';
 
 /*
   * Helper function
@@ -65,4 +65,4 @@ function foldWords(text, foldNumber) {
   return result.join('\n\n');
 }
 
-module.exports = foldWords;
+export default foldWords;

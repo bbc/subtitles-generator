@@ -1,4 +1,4 @@
-const formatSeconds = require('./util/format-seconds.js');
+import formatSeconds from './util/format-seconds.js';
 const srtGenerator = (vttJSON) => {
   let srtOut = '';
   vttJSON.forEach((v, i) => {
@@ -8,4 +8,4 @@ const srtGenerator = (vttJSON) => {
   return srtOut;
 };
 
-module.exports = srtGenerator;
+export default srtGenerator;

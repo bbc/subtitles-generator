@@ -1,7 +1,7 @@
-const textSegmentation = require('./text-segmentation/index.js');
-const addLineBreakBetweenSentences = require('./line-break-between-sentences/index.js');
-const foldWords = require('./fold/index.js');
-const divideIntoTwoLines = require('./divide-into-two-lines/index.js');
+import textSegmentation from './text-segmentation/index.js';
+import addLineBreakBetweenSentences from './line-break-between-sentences/index.js';
+import foldWords from './fold/index.js';
+import divideIntoTwoLines from './divide-into-two-lines/index.js';
 
 /**
  * Takes in array of word object,
@@ -33,5 +33,9 @@ function preSegmentText(textInput, tmpNumberOfCharPerLine = 35) {
   return textDividedIntoTwoLines;
 }
 
-module.exports = preSegmentText;
-module.exports.getTextFromWordsList = getTextFromWordsList;
+export {
+  preSegmentText,
+  getTextFromWordsList
+};
+
+export default preSegmentText;

@@ -1,5 +1,5 @@
 // for itt
-const TC = require('smpte-timecode');
+import TC from 'smpte-timecode';
 
 const tcFormat = (frames, FPS) => {
   const tc = TC(Math.round(frames), FPS, false);
@@ -7,4 +7,4 @@ const tcFormat = (frames, FPS) => {
   return tc.toString().replace(/^00/, '01'); // FIXME this breaks on videos longer than 1h!
 };
 
-module.exports = tcFormat;
+export default tcFormat;

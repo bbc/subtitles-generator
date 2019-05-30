@@ -1,5 +1,5 @@
-const escapeText = require('./util/escape-text.js');
-const formatSeconds = require('./util/format-seconds.js');
+import escapeText from './util/escape-text.js';
+import formatSeconds from './util/format-seconds.js';
 
 const ttmlGeneratorPremiere = (vttJSON) => {
   let ttmlOut = `<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
@@ -25,4 +25,4 @@ const ttmlGeneratorPremiere = (vttJSON) => {
   return ttmlOut;
 };
 
-module.exports = ttmlGeneratorPremiere;
+export default ttmlGeneratorPremiere;

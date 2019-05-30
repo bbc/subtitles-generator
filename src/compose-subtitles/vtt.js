@@ -1,4 +1,4 @@
-const formatSeconds = require('./util/format-seconds.js');
+import formatSeconds from './util/format-seconds.js';
 
 const vttGenerator = (vttJSON) => {
   let vttOut = 'WEBVTT\n\n';
@@ -9,4 +9,4 @@ const vttGenerator = (vttJSON) => {
   return vttOut;
 };
 
-module.exports = vttGenerator;
+export default vttGenerator;

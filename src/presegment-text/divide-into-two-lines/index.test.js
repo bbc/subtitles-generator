@@ -1,5 +1,5 @@
 'use strict';
-var divideIntoTwoLines = require('./index.js');
+import divideIntoTwoLines from './index.js';
 
 var sampleText = `Hi there, my name is Ian police -
 are recording this video to talk

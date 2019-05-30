@@ -1,5 +1,5 @@
 'use strict';
-var addLineBreakBetweenSentences = require('./index.js');
+import addLineBreakBetweenSentences from './index.js';
 
 var sampleText = `Hi there, my name is Ian police - are recording this video to talk about mercury for the folks at a tech daily conference in New York.
 Sorry, I can't be there in person, so we are building a prototype funded in part by Google DNI of a web-based computer, assisted transcription and translation tool with some video editing features.
