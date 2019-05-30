@@ -1,24 +1,41 @@
 {
-  "name": "subtitles-composer",
+  "name": "@bbc/subtitles-generator",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
+  "description": "A node module to generate subtitles by segmenting a list of time-coded text.",
+  "main": "index.js",
   "scripts": {
     "lint": "npx eslint --ignore-path .eslintignore .",
     "lint:fix": "eslint --ignore-path .eslintignore . --fix",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "start": "babel-node example-usage.js",
+    "build": "rimraf ./build && npx babel ./src  --out-dir ./build && rm ./build/package.json || true && cp package.json ./build/package.json && rm ./build/README.md || true && cp README.md ./build/README.md || true",
+    "publish:public": "npm run build && npm publish build --access public",
+    "publish:dry:run": "npm publish --dry-run"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "sbd": "^1.0.15",
     "smpte-timecode": "^1.2.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "rimraf": "^2.6.3"
+  },
+  "bugs": {
+    "url": "https://github.com/bbc/subtitles-generator/issues"
+  },
+  "homepage": "https://github.com/bbc/subtitles-generator",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbc/subtitles-generator.git"
   }
 }

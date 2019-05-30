@@ -1,5 +1,5 @@
 const fs = require('fs');
-const subtitlesComposer = require('./src/index.js');
+import subtitlesGenerator from './src/index.js';
 // const getTextFromWordsList = require('./src/index.js').getTextFromWordsList;
 const sampleWords = require('./sample/words-list.sample.json').words;
 
@@ -9,15 +9,15 @@ function getTextFromWordsList(words) {
 
 const plainText = getTextFromWordsList(sampleWords);
 
-const subtitlesJson = subtitlesComposer({ words: sampleWords, type: 'json' });
-const ttmlPremiere = subtitlesComposer({ words: sampleWords, type: 'premiere' });
-const ittData = subtitlesComposer({ words: sampleWords, type: 'itt' });
-const ttmlData = subtitlesComposer({ words: sampleWords, type: 'ttml' });
-const srtData = subtitlesComposer({ words: sampleWords, type: 'srt', numberOfCharPerLine: 45 });
-const vttData = subtitlesComposer({ words: sampleWords, type: 'vtt' });
-const csvData = subtitlesComposer({ words: sampleWords, type: 'csv' });
-const preSegmentTextData = subtitlesComposer({ words: sampleWords, type: 'pre-segment-txt' });
-const testTet = subtitlesComposer({ words: plainText, type: 'txt' });
+const subtitlesJson = subtitlesGenerator({ words: sampleWords, type: 'json' });
+const ttmlPremiere = subtitlesGenerator({ words: sampleWords, type: 'premiere' });
+const ittData = subtitlesGenerator({ words: sampleWords, type: 'itt' });
+const ttmlData = subtitlesGenerator({ words: sampleWords, type: 'ttml' });
+const srtData = subtitlesGenerator({ words: sampleWords, type: 'srt', numberOfCharPerLine: 45 });
+const vttData = subtitlesGenerator({ words: sampleWords, type: 'vtt' });
+const csvData = subtitlesGenerator({ words: sampleWords, type: 'csv' });
+const preSegmentTextData = subtitlesGenerator({ words: sampleWords, type: 'pre-segment-txt' });
+const testTet = subtitlesGenerator({ words: plainText, type: 'txt' });
 
 fs.writeFileSync('./example-output/test.json', JSON.stringify(subtitlesJson, null, 2));
 fs.writeFileSync('./example-output/test-premiere.xml', ttmlPremiere);

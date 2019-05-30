@@ -1,4 +1,4 @@
-# Subtitles composer - draft 
+# Subtitles Generator - draft 
 
 A node module to generate subtitles by segmenting a list of time-coded text.
 
@@ -32,6 +32,11 @@ const srtData = subtitlesComposer({words: sampleWords, type: 'srt'})
 const vttData = subtitlesComposer({words: sampleWords, type: 'vtt'})
 ```
 see [`example-usage.js`](./example-usage.js) for more comprehensive example.
+
+To try locally
+```
+npx babel-node example-usage.js
+```
 
 ### `words` Input 
 - either an array list of words objects    
@@ -110,13 +115,19 @@ _Linting, github pre-push hook - optional_ -->
 - npm > `6.1.0`
 - [Node 10 - dubnium](https://scotch.io/tutorials/whats-new-in-node-10-dubnium)
 - [Eslint](https://eslint.org/)
+- [Babel](https://babeljs.io/)
 
 Node version is set in node version manager [`.nvmrc`](https://github.com/creationix/nvm#nvmrc)
 
 ## Build
 <!-- _How to run build_ -->
 
-_NA_
+```
+npm run build
+```
+
+uses [babel-cli](https://babeljs.io/docs/en/babel-cli) to transpile ES6 into the `./build` folder.
+
 
 ## Tests
 <!-- _How to carry out tests_ -->
@@ -146,4 +157,15 @@ npm run lint:fix
 ## Deployment
 <!-- _How to deploy the code/app into test/staging/production_ -->
 
-_NA_
+_coming soon, deploying to npm registry as [@bbc/subtitles-composer]()_
+
+```
+npm run publish:public
+```
+
+---
+
+# TODO
+- [ ] Open source
+- [ ] use import/export in modules 
+- [x] add babel 

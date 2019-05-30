@@ -3,7 +3,8 @@ const addLineBreakBetweenSentences = require('./presegment-text/line-break-betwe
 const foldWords = require('./presegment-text/fold/index.js');
 const divideIntoTwoLines = require('./presegment-text/divide-into-two-lines/index.js');
 const preSegmentText = require('./presegment-text/index.js');
-const getTextFromWordsList = require('./presegment-text/index.js').getTextFromWordsList;
+const getTextFromWordsList = require('./presegment-text/index.js')
+  .getTextFromWordsList;
 
 const ttmlGeneratorPremiere = require('./compose-subtitles/premiere.js');
 const ittGenerator = require('./compose-subtitles/itt.js');
@@ -14,13 +15,18 @@ const csvGenerator = require('./compose-subtitles/csv.js');
 
 function segmentedTextToList(text) {
   let result = text.split('\n\n');
-  result = result.map((line) => { return line.trim(); });
+  result = result.map(line => {
+    return line.trim();
+  });
 
   return result;
 }
 
 function countWords(text) {
-  return text.trim().replace(/\n /g, '').split(' ').length;
+  return text
+    .trim()
+    .replace(/\n /g, '')
+    .split(' ').length;
 }
 
 function countList(list) {
@@ -88,16 +94,18 @@ function subtitlesComposer({ words, type, numberOfCharPerLine }) {
   }
 }
 
-module.exports.textSegmentation = textSegmentation;
-module.exports.textSegmentation = addLineBreakBetweenSentences;
-module.exports.foldWords = foldWords;
-module.exports.divideIntoTwoLines = divideIntoTwoLines;
-module.exports.getTextFromWordsList = getTextFromWordsList;
-module.exports.preSegmentText = preSegmentText;
-module.exports.ttmlGeneratorPremiere = ttmlGeneratorPremiere;
-module.exports.ttmlGenerator = ttmlGenerator;
-module.exports.ittGenerator = ittGenerator;
-module.exports.srtGenerator = srtGenerator;
-module.exports.vttGenerator = vttGenerator;
-module.exports.subtitlesComposer = subtitlesComposer;
-module.exports = subtitlesComposer;
+// module.exports.textSegmentation = textSegmentation;
+// module.exports.addLineBreakBetweenSentences = addLineBreakBetweenSentences;
+// module.exports.foldWords = foldWords;
+// module.exports.divideIntoTwoLines = divideIntoTwoLines;
+// module.exports.getTextFromWordsList = getTextFromWordsList;
+// module.exports.preSegmentText = preSegmentText;
+// module.exports.ttmlGeneratorPremiere = ttmlGeneratorPremiere;
+// module.exports.ttmlGenerator = ttmlGenerator;
+// module.exports.ittGenerator = ittGenerator;
+// module.exports.srtGenerator = srtGenerator;
+// module.exports.vttGenerator = vttGenerator;
+
+export { textSegmentation, addLineBreakBetweenSentences, foldWords, divideIntoTwoLines, getTextFromWordsList, preSegmentText, ttmlGeneratorPremiere, ttmlGenerator, ittGenerator, srtGenerator, vttGenerator };
+
+export default subtitlesComposer;
