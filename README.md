@@ -9,6 +9,7 @@ Exports to
 - [x] srt
 - [x] vtt 
 - [x] csv 
+- [x] txt - pre-segmented text
 
 It can also provide pre-segmented lines if the input is plain text.
 
@@ -75,16 +76,11 @@ Example
 const sampleWords = "There is a day. ..."
 ```
 
-If input `words` is plain text then only and not a list of words with timecodes, then can only use `pre-segment-txt` option.
+If input `words` is plain text only (and not a list of words with timecodes) then can only use `pre-segment-txt` option. (see [`test-presegment.txt`](./example-output/test-presegment.txt) for example)
 
 ## Output: 
-- segmented plain text
+see [`example-output`](./example-output) folder for examples.
 
-example
-
-```
-There is a day.
-```
 
 ## System Architecture
 <!-- _High level overview of system architecture_ -->
