@@ -17,7 +17,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "sbd": "^1.0.15",
+    "sbd": "^1.0.19",
     "smpte-timecode": "^1.2.3"
   },
   "devDependencies": {
